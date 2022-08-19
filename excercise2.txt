@@ -1,0 +1,8 @@
+Differences between int and Integer
+int is a primitive type while Integer is a class type.
+int is a data type which stores 32 bit signed two's compliment integer while Integer is a wrapper class which wraps a primitive type int into an object
+int provides less flexibility as compare to Integer as it only allows binary value of an integer in it
+Integer is better at storing and manipulating int data. Since Wrapper classes inherit Object class, they can be used in collections with Object reference or generics.
+int can store 32 bits while Integer can store 128 bits to store its int value
+int can't be converted to Integer while Integer can be converted to its integer value to other bases such as Binary, Octal or Hexadecimal format using toBinaryString(), toOctalString() or toHexString() respectively.
+int do not allowed any of inbuilt functions to change its value or syntax while Integer can reverse number or rotate it left or right using reverse(), rotateLeft() and rotateRight() respectively.
