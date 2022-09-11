@@ -6,136 +6,76 @@ package com.example;
  */
 public class Product 
 {
-    String employeeId;
-    String firstName;
-    int age;
-    int sSN;
-    String address;
-    String gender;
-    float weight;
+    String productName;
+    String productDesc;
+    double productPrice;
+    int maximumQuantity;
+    
     /**
-     * @param employeeIdSet sets the employees id
+     * @param prodName sets the product name
      */
-    public void setEmployeeId(String employeeIdSet)
+    public void setProdName(String prodName)
     {
-        employeeId = employeeIdSet;
+        productName = prodName;
     }
     /**
-     * @return retrievest employee Id
+     * @return retrieves product name
      */
-    public String getEmployeeId()
+    public String getProdName()
     {
-        return employeeId;
+        return productName;
     }
     /**
-     * @param setFirstName sets first name of employee
+     * @param prodDesc sets description of product
      */
-    public void setFirstName(String setFirstName)
+    public void prodDesc(String setDesc)
     {
-        firstName = setFirstName;
+        productDesc = setDesc;
     }
     /**
-     * @return retrieves first name of employee
+     * @return retrieves description of product
      */
-    public String getFirstName()
+    public String getprodDesc()
     {
-        return firstName;
+        return productDesc;
     }
     /**
-     * @param setAge sets age of employee
+     * @param setPrice sets price of product
      */
-    public void setAge(int setAge)
+    public void setProdPrice(Double setPrice)
     {
-        age = setAge;
+        productPrice = setPrice;
     }
     /**
      * @return retrieves age of employee
      */
-    public int getAge()
+    public double getPrice()
     {
-        return age;
+        return productPrice;
     }
     /**
-     * @param d sets employee ssn
+     * @param maxQuant sets maximum quantity allowed to be ordered
      */
-    public void setSSN(int d)
+    public void setMaxQuant(int maxQuant)
     {
-        sSN = d;
+        maximumQuantity = maxQuant;
     }
     /**
-     * @return retrievse ssn of employee
+     * @return retrievse maximum quantity allowed to be ordered
      */
-    public int getsSN()
+    public int getMaxQuant()
     {
-        return sSN;
+        return maximumQuantity;
     }
+    
     /**
-     * @param addressString sets address of employeee
-     */
-    public void setAddress(String addressString)
-    {
-        address = addressString;
-    }
-    /**
-     * @return retrieves address of employee
-     */
-    public String getAddress()
-    {
-        return address;
-    }
-    /**
-     * @param genderSet sets gender of employee
-     */
-    public void setGender(String genderSet)
-    {
-        gender = genderSet;
-    }
-    /**
-     * @return retrieves gender of the employee
-     */
-    public String getGender()
-    {
-        return gender;
-    }
-    /**
-     * @param weightSet sets weight of the employee
-     */
-    public void setWeight(Float weightSet)
-    {
-        weight = weightSet;
-    }
-    /**
-     * @return retrieves weight of the employee
-     */
-    public float getWeight()
-    {
-        return weight;
-    }
-    /**
-     * @return prints out all the employee's info
+     * @return prints out all the product's info
      */
     public String toString()
     {
-        String personInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
-        return personInfo;
+        String productnInfo = "Product Info: " + productName +", " + productDesc + ", $" + String.format("%.20f", productPrice) + ", Maximum Quantity: " + maximumQuantity;
+        return productnInfo;
     }
-    /**
-     * @return introduces employee
-     */
-    public String introduce()
-    {
-        String introducePerson = "";
-        return null;
-    }
-    public class course
-    {
-        /**
-         * prints out schedule
-        */
-        public void printSchedule()
-        {
-            System.out.println("CS151 Tue/Thur 6-7:15");
-        }
-    }
+   
 }
 

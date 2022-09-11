@@ -1,75 +1,140 @@
 package com.example;
 
 /**
- * Hello world!
+ * Person Class initializes the person
  *
+ * @author  Prem Agarwal
+ * @version 1.0
+ * @since   8/25/22
  */
 public class Person 
 {
     String lastName;
     String firstName;
     int age;
-    Float gpa;
-    String major;
-    String department;
-    
-    
+    int sSN;
+    String address;
+    String gender;
+    float weight;
+    /**
+     * @param setLastName the last name which sets the lastName of Person
+     */
     public void setLastName(String setLastName)
     {
         lastName = setLastName;
     }
+    /**
+     * @return the last name of the Person it is set to
+     */
     public String getLastName()
     {
         return lastName;
     }
+    /**
+     * @param setFirstName sets the first name of the Person
+     */
     public void setFirstName(String setFirstName)
     {
         firstName = setFirstName;
     }
+    /**
+     * @return firstName of the person
+     */
     public String getFirstName()
     {
         return firstName;
     }
+    /**
+     * @param setAge sets the age of the person
+     */
     public void setAge(int setAge)
     {
         age = setAge;
     }
+    /**
+     * @return gives the age of the person
+     */
     public int getAge()
     {
         return age;
     }
-    public void setGpa(Float d)
+    /**
+     * @param d sets the SSN of the person
+     */
+    public void setSSN(int d)
     {
-        gpa = d;
+        sSN = d;
     }
-    public float getGpa()
+    /**
+     * @return retrives the ssn of the person
+     */
+    public int getsSN()
     {
-        return gpa;
+        return sSN;
     }
-    public void setMajor(String setMajor)
+    /**
+     * @param addressString sets the address of the  person
+     */
+    public void setAddress(String addressString)
     {
-        major = setMajor;
+        address = addressString;
     }
-    public String getMajor()
+    /**
+     * @return retrieves person's address
+     */
+    public String getAddress()
     {
-        return major;
+        return address;
     }
-    public void setDepartment(String setDept)
+    /**
+     * @param genderSet sets gender of the person
+     */
+    public void setGender(String genderSet)
     {
-        department = setDept;
+        gender = genderSet;
     }
-    public String getDepartment()
+    /**
+     * @return retreives gender of the person
+     */
+    public String getGender()
     {
-        return department;
+        return gender;
     }
-    
+    /**
+     * @param weightSet sets the weight of the person
+     */
+    public void setWeight(Float weightSet)
+    {
+        weight = weightSet;
+    }
+    /**
+     * @return returns weight of the person
+     */
+    public float getWeight()
+    {
+        return weight;
+    }
+    /**
+     *  @return person info as well as student info of the person
+     */
     public String toString()
     {
-        String studentInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
-        return studentInfo;
+        String personInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
+        return personInfo;
+    }
+    /**
+     * @return introduces the person
+     */
+    public String introduce() //incomplete
+    {
+        String introducePerson = firstName;
+        return introducePerson;
     }
     public class course
     {
+        /** 
+        * prints student schedule
+        */
         public void printSchedule()
         {
             System.out.println("CS151 Tue/Thur 6-7:15");

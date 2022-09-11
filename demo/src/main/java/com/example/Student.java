@@ -13,7 +13,9 @@ public class Student
     String major;
     String department;
     
-    
+    /**
+     * @param setLastName sets last name
+     */
     public void setLastName(String setLastName)
     {
         lastName = setLastName;
