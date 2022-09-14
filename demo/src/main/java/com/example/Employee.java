@@ -4,138 +4,75 @@ package com.example;
  * Hello world!
  *
  */
-public class Employee 
+public class Employee extends Person
 {
-    String employeeId;
-    String firstName;
-    int age;
-    int sSN;
-    String address;
-    String gender;
-    float weight;
+    private int employeeId;
+    private String employeeStatus;
+    private int employeePay;
+
+    Employee(String firstName, String lastName, int age, int sSN, String address, String gender, float weight)
+    {
+        super(firstName, lastName, age, sSN, address, gender, weight);
+    }
     /**
      * @param employeeIdSet sets the employees id
      */
-    public void setEmployeeId(String employeeIdSet)
+    public void setEmployeeId(int employeeIdSet)
     {
         employeeId = employeeIdSet;
     }
     /**
      * @return retrievest employee Id
      */
-    public String getEmployeeId()
+    public int getEmployeeId()
     {
         return employeeId;
     }
-    /**
-     * @param setFirstName sets first name of employee
-     */
-    public void setFirstName(String setFirstName)
+    public void setEmployeeStatus(String employeeStatusSet)
     {
-        firstName = setFirstName;
+        employeeStatus = employeeStatusSet;
     }
     /**
-     * @return retrieves first name of employee
+     * @return retrievest employee Id
      */
-    public String getFirstName()
+    public String getEmployeeStatus()
     {
-        return firstName;
+        return employeeStatus;
+    }
+    public void setEmployeePay(int employeePaySet)
+    {
+        employeePay = employeePaySet;
     }
     /**
-     * @param setAge sets age of employee
+     * @return retrievest employee Id
      */
-    public void setAge(int setAge)
+    public int getEmployeePay()
     {
-        age = setAge;
+        return employeePay;
     }
-    /**
-     * @return retrieves age of employee
-     */
-    public int getAge()
+    public int calculatePay(int hrs)
     {
-        return age;
-    }
-    /**
-     * @param d sets employee ssn
-     */
-    public void setSSN(int d)
-    {
-        sSN = d;
-    }
-    /**
-     * @return retrievse ssn of employee
-     */
-    public int getsSN()
-    {
-        return sSN;
-    }
-    /**
-     * @param addressString sets address of employeee
-     */
-    public void setAddress(String addressString)
-    {
-        address = addressString;
-    }
-    /**
-     * @return retrieves address of employee
-     */
-    public String getAddress()
-    {
-        return address;
-    }
-    /**
-     * @param genderSet sets gender of employee
-     */
-    public void setGender(String genderSet)
-    {
-        gender = genderSet;
-    }
-    /**
-     * @return retrieves gender of the employee
-     */
-    public String getGender()
-    {
-        return gender;
-    }
-    /**
-     * @param weightSet sets weight of the employee
-     */
-    public void setWeight(Float weightSet)
-    {
-        weight = weightSet;
-    }
-    /**
-     * @return retrieves weight of the employee
-     */
-    public float getWeight()
-    {
-        return weight;
+        int totalpay = employeePay * hrs;
+        return totalpay;
     }
     /**
      * @return prints out all the employee's info
      */
     public String toString()
     {
-        String personInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
+        String personInfo = "Employee Info: " + super.toString() + ", Employee Id " + employeeId + ", Employee Status " + employeeStatus + ", Employee Pay $" + employeePay;
         return personInfo;
     }
     /**
      * @return introduces employee
      */
-    public String introduce()
+    @Override
+    public void introduce()
     {
-        String introducePerson = "";
-        return null;
+        //String introducePerson = "";
+        
+        System.out.println(toString());
     }
-    public class course
-    {
-        /**
-         * prints out schedule
-        */
-        public void printSchedule()
-        {
-            System.out.println("CS151 Tue/Thur 6-7:15");
-        }
-    }
+    
 }
 

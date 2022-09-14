@@ -9,13 +9,23 @@ package com.example;
  */
 public class Person 
 {
-    String lastName;
-    String firstName;
-    int age;
-    int sSN;
-    String address;
-    String gender;
-    float weight;
+    private String lastName;
+    private String firstName;
+    private int age;
+    private int sSN;
+    private String address;
+    private String gender;
+    private float weight;
+    public Person(String firstName2, String lastName2, int age2, int sSN2, String address2, String gender2, float weight2) 
+    {
+        this.firstName = firstName2;
+        this.lastName = lastName2;
+        this.age = age2;
+        this.sSN = sSN2;
+        this.address = address2;
+        this.gender = gender2;
+        this.weight = weight2;
+    }
     /**
      * @param setLastName the last name which sets the lastName of Person
      */
@@ -119,26 +129,17 @@ public class Person
      */
     public String toString()
     {
-        String personInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
+        String personInfo = "Person Info: " + firstName + "" + lastName + ", " + age + "years old, " + sSN + "SSN, " + address + ", " + gender + ", " + weight;
         return personInfo;
     }
     /**
      * @return introduces the person
      */
-    public String introduce() //incomplete
+    public void introduce() //incomplete
     {
-        String introducePerson = firstName;
-        return introducePerson;
+        String introducePerson = toString();
+        System.out.print(introducePerson);
     }
-    public class course
-    {
-        /** 
-        * prints student schedule
-        */
-        public void printSchedule()
-        {
-            System.out.println("CS151 Tue/Thur 6-7:15");
-        }
-    }
+
 }
 

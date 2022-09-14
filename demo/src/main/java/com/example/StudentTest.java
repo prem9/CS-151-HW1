@@ -21,7 +21,7 @@ public class StudentTest
     student.setMajor("Computer Science Department");
     // prints student
     student.toString();
-    // prints schedule
+    // prints scheduleh
     Student.course course=student.new course();
     course.printSchedule();
    }

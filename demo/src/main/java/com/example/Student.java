@@ -6,12 +6,12 @@ package com.example;
  */
 public class Student 
 {
-    String lastName;
-    String firstName;
-    int age;
-    Float gpa;
-    String major;
-    String department;
+    private String lastName;
+    private String firstName;
+    private int age;
+    private Float gpa;
+    private String major;
+    private String department;
     
     /**
      * @param setLastName sets last name

@@ -4,12 +4,12 @@ package com.example;
  * Hello world!
  *
  */
-public class Product 
+public class Product
 {
-    String productName;
-    String productDesc;
-    double productPrice;
-    int maximumQuantity;
+    private String productName;
+    private String productDesc;
+    private double productPrice;
+    private int maximumQuantity;
     
     /**
      * @param prodName sets the product name
