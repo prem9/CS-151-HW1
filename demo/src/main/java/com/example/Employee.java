@@ -8,7 +8,7 @@ public class Employee extends Person
 {
     private int employeeId;
     private String employeeStatus;
-    private int employeePay;
+    private String employeePay;
 
     Employee(String firstName, String lastName, int age, int sSN, String address, String gender, float weight)
     {
@@ -39,28 +39,45 @@ public class Employee extends Person
     {
         return employeeStatus;
     }
-    public void setEmployeePay(int employeePaySet)
+    public void setEmployeePay(String employeePaySet)
     {
         employeePay = employeePaySet;
     }
     /**
      * @return retrievest employee Id
      */
-    public int getEmployeePay()
+    public String getEmployeePay()
     {
         return employeePay;
     }
-    public int calculatePay(int hrs)
+    public double calculatePay(String time)
     {
-        int totalpay = employeePay * hrs;
-        return totalpay;
+       
+        double salary = Double.parseDouble(employeePay.replaceAll("[^0-9]", ""));
+        double totalPay = 0;
+        double timeInt = Double.parseDouble(time.replaceAll("[^0-9]", ""));
+        
+        if (employeePay.contains("hr"))
+        {
+            totalPay = salary * timeInt;
+        }
+        else if (employeePay.contains("yr"))
+        {
+            totalPay = (salary * timeInt)/52;
+            
+        }
+        totalPay = totalPay * 100;
+        totalPay = Math.round(totalPay);
+        totalPay = totalPay/100;
+        return totalPay;
     }
     /**
      * @return prints out all the employee's info
      */
+    
     public String toString()
     {
-        String personInfo = "Employee Info: " + super.toString() + ", Employee Id " + employeeId + ", Employee Status " + employeeStatus + ", Employee Pay $" + employeePay;
+        String personInfo =  super.toString() + ", Employee Id: " + employeeId + ", Employee Status: " + employeeStatus + ", Employee Salary: " + employeePay;
         return personInfo;
     }
     /**

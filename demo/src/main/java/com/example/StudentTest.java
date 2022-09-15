@@ -20,8 +20,9 @@ public class StudentTest
     student.setLastName("Smith");
     student.setMajor("Computer Science Department");
     // prints student
-    student.toString();
+    System.out.println(student.toString());
     // prints scheduleh
+    
     Student.course course=student.new course();
     course.printSchedule();
    }

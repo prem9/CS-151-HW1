@@ -11,6 +11,13 @@ public class Product
     private double productPrice;
     private int maximumQuantity;
     
+    public Product(String productName1, String productDesc1, double productPrice1, int maximumQuantity1) 
+    {
+        this.productName = productName1;
+        this.productDesc = productDesc1;
+        this.productPrice = productPrice1;
+        this.maximumQuantity = maximumQuantity1;
+    }
     /**
      * @param prodName sets the product name
      */
@@ -73,7 +80,7 @@ public class Product
      */
     public String toString()
     {
-        String productnInfo = "Product Info: " + productName +", " + productDesc + ", $" + String.format("%.20f", productPrice) + ", Maximum Quantity: " + maximumQuantity;
+        String productnInfo = "Product Info: " + productName +", " + productDesc + ", $" + String.format("%.2f", productPrice) + ", Maximum Quantity: " + maximumQuantity;
         return productnInfo;
     }
    

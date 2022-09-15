@@ -67,7 +67,7 @@ public class Student
     
     public String toString()
     {
-        String studentInfo = "Student Info: " + firstName + lastName + ", " + age + "years old, " + gpa + "gpa, " + major + ", " + department;
+        String studentInfo = "Student Info: " + firstName + " "+ lastName + ", " + age + " years old, " + gpa + " gpa, " + major + ", " + department;
         return studentInfo;
     }
     public class course

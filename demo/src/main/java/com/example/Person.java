@@ -129,7 +129,7 @@ public class Person
      */
     public String toString()
     {
-        String personInfo = "Person Info: " + firstName + "" + lastName + ", " + age + "years old, " + sSN + "SSN, " + address + ", " + gender + ", " + weight;
+        String personInfo = "Person Info: " + firstName + " " + lastName + ", " + age + " years old, SSN: " + sSN + ", " + address + ", " + gender + ", weight: " + weight + " lbs";
         return personInfo;
     }
     /**
