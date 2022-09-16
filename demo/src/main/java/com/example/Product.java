@@ -4,7 +4,7 @@ package com.example;
  * Hello world!
  *
  */
-public class Product
+public class Product // add final to class and private variables remove setters
 {
     private String productName;
     private String productDesc;
