@@ -4,11 +4,11 @@ package com.example;
  * Hello world!
  *
  */
-public class Product // add final to class and private variables remove setters
+public final class  Product // add final to class and private variables remove setters
 {
-    private String productName;
-    private String productDesc;
-    private double productPrice;
+    private final String productName;
+    private final String productDesc;
+    private final double productPrice;
     private int maximumQuantity;
     
     public Product(String productName1, String productDesc1, double productPrice1, int maximumQuantity1) 
@@ -18,13 +18,8 @@ public class Product // add final to class and private variables remove setters
         this.productPrice = productPrice1;
         this.maximumQuantity = maximumQuantity1;
     }
-    /**
-     * @param prodName sets the product name
-     */
-    public void setProdName(String prodName)
-    {
-        productName = prodName;
-    }
+    
+    
     /**
      * @return retrieves product name
      */
@@ -32,13 +27,7 @@ public class Product // add final to class and private variables remove setters
     {
         return productName;
     }
-    /**
-     * @param prodDesc sets description of product
-     */
-    public void prodDesc(String setDesc)
-    {
-        productDesc = setDesc;
-    }
+    
     /**
      * @return retrieves description of product
      */
@@ -46,13 +35,8 @@ public class Product // add final to class and private variables remove setters
     {
         return productDesc;
     }
-    /**
-     * @param setPrice sets price of product
-     */
-    public void setProdPrice(Double setPrice)
-    {
-        productPrice = setPrice;
-    }
+    
+    
     /**
      * @return retrieves age of employee
      */
@@ -60,13 +44,7 @@ public class Product // add final to class and private variables remove setters
     {
         return productPrice;
     }
-    /**
-     * @param maxQuant sets maximum quantity allowed to be ordered
-     */
-    public void setMaxQuant(int maxQuant)
-    {
-        maximumQuantity = maxQuant;
-    }
+    
     /**
      * @return retrievse maximum quantity allowed to be ordered
      */
