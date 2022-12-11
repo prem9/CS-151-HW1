@@ -1,8 +1,10 @@
 package com.example;
 
 /**
- * Hello world!
- *
+ * Product class
+ * @author  Prem Agarwal
+ * @version 1.0
+ * @since   9/22/22
  */
 public final class  Product // add final to class and private variables remove setters
 {

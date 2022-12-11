@@ -1,8 +1,10 @@
 package com.example;
 
 /**
- * Hello world!
- *
+ * Employee class sets up employee
+ * @author  Prem Agarwal
+ * @version 1.0
+ * @since   9/22/22
  */
 public class Employee extends Person
 {
@@ -22,34 +24,44 @@ public class Employee extends Person
         employeeId = employeeIdSet;
     }
     /**
-     * @return retrievest employee Id
+     * @return retrieves employee Id
      */
     public int getEmployeeId()
     {
         return employeeId;
     }
+    /**
+     * @param employeeStatusSet sets status of employee
+     */
     public void setEmployeeStatus(String employeeStatusSet)
     {
         employeeStatus = employeeStatusSet;
     }
     /**
-     * @return retrievest employee Id
+     * @return retrieves employee Id
      */
     public String getEmployeeStatus()
     {
         return employeeStatus;
     }
+    /**
+     * @param employeePaySet sets employee's pay
+     */
     public void setEmployeePay(String employeePaySet)
     {
         employeePay = employeePaySet;
     }
     /**
-     * @return retrievest employee Id
+     * @return retrieves employee Id
      */
     public String getEmployeePay()
     {
         return employeePay;
     }
+    /**
+     * @param time provides time worked
+     * @return gives the pay calculated depending on the time and salary
+     */
     public double calculatePay(String time)
     {
        

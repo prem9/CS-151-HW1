@@ -1,8 +1,10 @@
 package com.example;
 
 /**
- * Hello world!
- *
+ * Employee Test class tests employee
+ * @author  Prem Agarwal
+ * @version 1.0
+ * @since   9/22/22
  */
 public class EmployeeTest
 {
